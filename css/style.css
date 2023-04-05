@@ -52,10 +52,35 @@ a {
   height: 48px;
   background-color: #9C0332;
   border-radius: 30px;
+  border: none;
+  transition: all 300ms;
+}
+.header__button:hover {
+  background-color: #740325;
 }
 .header__button-link {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
+}
+
+.game-menu {
+  background-image: url(../img/content_font.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 556px;
+  padding-top: 128px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.game-menu__item {
+  width: 378px;
+  height: 300px;
+  border-radius: 16px;
+}
+.game-menu__img {
+  border-radius: 16px;
 }/*# sourceMappingURL=style.css.map */
