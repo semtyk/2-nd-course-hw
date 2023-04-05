@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    height: 1024px;
+    background-image: url(../img/top_font.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+
+    &__content {
+        padding-top: 217px;
+
+
+    }
+
+    &__heading {
+        max-width: 750px;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 78px;
+        color: #FFFFFF;
+    }
+
+    &__text {
+        max-width: 480px;
+        margin-top: 32px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+
+        &_bold {
+            font-weight: 700;
+        }
+    }
+
+    &__button {
+        margin-top: 44px;
+        width: 234px;
+        height: 48px;
+        background-color: #9C0332;
+        border-radius: 30px;
+    }
+
+    &__button-link {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+
+}
