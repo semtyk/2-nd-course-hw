@@ -80,18 +80,46 @@ a {
     min-height: 556px;
     padding-top: 128px;
 
+}
+
+.game-list {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
+}
 
-    &__item {
+.game {
+
+    &__link {
+
         width: 378px;
         height: 300px;
         border-radius: 16px;
-    }
 
-    &__img {
-        border-radius: 16px;
-    }
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
 
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: #FFFFFF;
+
+        display: flex;
+        align-items: flex-end;
+        padding-left: 32px;
+        padding-bottom: 32px;
+
+        &_1 {
+            background-image: url(../img/item_pic1.jpg);
+        }
+
+        &_2 {
+            background-image: url(../img/item_pic2.jpg);
+        }
+
+        &_3 {
+            background-image: url(../img/item_pic3.jpg);
+        }
+    }
 }
