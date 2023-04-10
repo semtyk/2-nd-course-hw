@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -72,6 +73,7 @@ a {
   background-size: cover;
   min-height: 556px;
   padding-top: 128px;
+  padding-bottom: 128px;
 }
 
 .game-list {
@@ -104,4 +106,41 @@ a {
 }
 .game__link_3 {
   background-image: url(../img/item_pic3.jpg);
+}
+
+/*----Подключаем медиа-запросы для адаптива*/
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    height: 735px;
+    background-position: 35% 0%;
+  }
+  .header__content {
+    padding-top: 238px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__heading {
+    max-width: 343px;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+  }
+  .header__text {
+    max-width: 343px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .header__button {
+    margin-top: 32px;
+  }
+  .game__link {
+    width: 343px;
+    padding-left: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */

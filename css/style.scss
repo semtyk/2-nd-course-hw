@@ -79,7 +79,7 @@ a {
     background-size: cover;
     min-height: 556px;
     padding-top: 128px;
-
+    padding-bottom: 128px;
 }
 
 .game-list {
@@ -125,4 +125,4 @@ a {
 }
 
 /*----Подключаем медиа-запросы для адаптива*/
-@import '/css/mobile';
+@import 'mobile.scss';
