@@ -16,6 +16,11 @@ body {
 
 a {
     text-decoration: none;
+
+    &:hover {
+        cursor: url(../img/Vector.svg), pointer;
+    }
+
 }
 
 .header {
@@ -50,7 +55,17 @@ a {
         }
     }
 
-    &__button {
+
+    &__button-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+
         margin-top: 44px;
         width: 234px;
         height: 48px;
@@ -60,15 +75,8 @@ a {
         transition: all 300ms;
 
         &:hover {
-            background-color: #740325;
+            background-color: #EB443F;
         }
-    }
-
-    &__button-link {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
-        color: #FFFFFF;
     }
 }
 
@@ -79,13 +87,14 @@ a {
     background-size: cover;
     min-height: 556px;
     padding-top: 128px;
-
+    padding-bottom: 128px;
 }
 
 .game-list {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
+    justify-content: center;
 }
 
 .game {
@@ -121,5 +130,12 @@ a {
         &_3 {
             background-image: url(../img/item_pic3.jpg);
         }
+
+        &:hover {
+            border: 3px solid #44D2FF;
+        }
     }
 }
+
+/*----Подключаем медиа-запросы для адаптива*/
+@import 'mobile.scss';

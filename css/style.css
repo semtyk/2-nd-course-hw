@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +17,9 @@ body {
 
 a {
   text-decoration: none;
+}
+a:hover {
+  cursor: url(../img/Vector.svg), pointer;
 }
 
 .header {
@@ -46,7 +50,14 @@ a {
 .header__text_bold {
   font-weight: 700;
 }
-.header__button {
+.header__button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
   margin-top: 44px;
   width: 234px;
   height: 48px;
@@ -55,14 +66,8 @@ a {
   border: none;
   transition: all 300ms;
 }
-.header__button:hover {
-  background-color: #740325;
-}
-.header__button-link {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  color: #FFFFFF;
+.header__button-link:hover {
+  background-color: #EB443F;
 }
 
 .game-menu {
@@ -72,12 +77,14 @@ a {
   background-size: cover;
   min-height: 556px;
   padding-top: 128px;
+  padding-bottom: 128px;
 }
 
 .game-list {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+  justify-content: center;
 }
 
 .game__link {
@@ -104,4 +111,52 @@ a {
 }
 .game__link_3 {
   background-image: url(../img/item_pic3.jpg);
+}
+.game__link:hover {
+  border: 3px solid #44D2FF;
+}
+
+/*----Подключаем медиа-запросы для адаптива*/
+@media (max-width: 1200px) {
+  .center {
+    padding-left: calc(50% - 480px);
+    padding-right: calc(50% - 480px);
+  }
+}
+@media (max-width: 1024px) {
+  .header__content {
+    padding-top: 238px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header {
+    height: 735px;
+    background-position: 35% 0%;
+  }
+  .header__heading {
+    max-width: 343px;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+  }
+  .header__text {
+    max-width: 343px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .header__button {
+    margin-top: 32px;
+  }
+  .game__link {
+    width: 343px;
+    padding-left: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */
