@@ -127,6 +127,8 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 64px;
 }
 .gamebox__heading {
   font-weight: 700;
@@ -166,6 +168,15 @@ a:hover {
     flex-direction: column;
     align-items: center;
   }
+  .gamebox {
+    padding-top: 51px;
+    flex-direction: column;
+  }
+  .gamebox__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 @media (max-width: 767px) {
   .center {
@@ -194,5 +205,19 @@ a:hover {
   .game__link {
     width: 343px;
     padding-left: 14px;
+  }
+  .gamebox__heading {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .gamebox__text {
+    max-width: 343px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .gamebox__img {
+    width: 344px;
+    height: 236px;
   }
 }/*# sourceMappingURL=style.css.map */
