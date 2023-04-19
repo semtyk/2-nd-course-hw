@@ -137,5 +137,47 @@ a {
     }
 }
 
+.gamebox {
+    background-image: url(../img/content_font.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 800px;
+    padding-top: 233px;
+    padding-bottom: 233px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 64px;
+
+
+    &__heading {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 59px;
+        color: #FFFFFF;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        max-width: 600px;
+    }
+
+    &__img {
+        width: 485px;
+        height: 333px;
+        background-image: url(../img/game1_pic.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
 /*----Подключаем медиа-запросы для адаптива*/
 @import 'mobile.scss';

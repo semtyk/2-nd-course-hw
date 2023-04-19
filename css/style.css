@@ -116,6 +116,44 @@ a:hover {
   border: 3px solid #44D2FF;
 }
 
+.gamebox {
+  background-image: url(../img/content_font.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 800px;
+  padding-top: 233px;
+  padding-bottom: 233px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 64px;
+}
+.gamebox__heading {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: #FFFFFF;
+}
+.gamebox__text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 32px;
+  color: #FFFFFF;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  max-width: 600px;
+}
+.gamebox__img {
+  width: 485px;
+  height: 333px;
+  background-image: url(../img/game1_pic.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /*----Подключаем медиа-запросы для адаптива*/
 @media (max-width: 1200px) {
   .center {
@@ -126,6 +164,15 @@ a:hover {
 @media (max-width: 1024px) {
   .header__content {
     padding-top: 238px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .gamebox {
+    padding-top: 51px;
+    flex-direction: column;
+  }
+  .gamebox__content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,5 +205,19 @@ a:hover {
   .game__link {
     width: 343px;
     padding-left: 14px;
+  }
+  .gamebox__heading {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .gamebox__text {
+    max-width: 343px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .gamebox__img {
+    width: 344px;
+    height: 236px;
   }
 }/*# sourceMappingURL=style.css.map */
