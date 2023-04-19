@@ -7,11 +7,8 @@ let userNumber1, userNumber2;
 /*---Задание 1---*/
 
 function findMin(a, b) {
-    if (a <= b) {
-        return a;
-    } else {
-        return b;
-    }
+    
+    return a <= b ?  a : b;
 }
 
 userNumber1 = Number(prompt('Введите первое число'));
@@ -95,11 +92,11 @@ alert(cubeNumber(userNumber1));
 const pi = 3.1415;
 
 function getCircleArea() {
-    return this.radius ** 2 * pi;
+    return this.radius ** 2 * Math.PI;
 }
 
 function getCirclePerimeter() {
-    return this.radius * 2 * pi;
+    return this.radius * 2 * Math.PI;
 }
 
 const circle1 = {
