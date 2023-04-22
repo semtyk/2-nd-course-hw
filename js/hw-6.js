@@ -2,14 +2,16 @@
 alert ('Сейчас начнут выполняться задания');
 
 /*---Вспомогательные функции---*/
+const isNotValid = (value, maxValue, minValue) => isNaN(value) || value < minValue || value > maxValue;
+
 
 const inputNumbers = (minDiap, maxDiap) => {
   let userNumber = Number(prompt(`Введите число от ${minDiap} до ${maxDiap}`));
-  if (isNaN(userNumber) || userNumber < minDiap || userNumber > maxDiap) {
+  if (isNotValid(userNumber, maxDiap, minDiap)) {
     do {
       alert('Вы ввели некорректное значение, попробуйте еще раз');
       userNumber = Number(prompt(`Введите число от ${minDiap} до ${maxDiap}`));
-    } while (isNaN(userNumber) || userNumber < minDiap || userNumber > maxDiap);
+    } while (isNotValid(userNumber, maxDiap, minDiap));
   }
   return userNumber;
 }
@@ -41,6 +43,18 @@ for (let i = 0; i < userArray.length; i++) {
     console.log(`Позиция числа 4 в массиве [${userArray}] определяется номером ${i}`);
     break;
   }
+}
+
+/*---Задание 2.1---*/
+
+console.log('Задание 2.1');
+console.log(`Исходный массив: \n[${userArray}]`);
+console.log('Результат:');
+
+if (userArray.includes(4)) {
+  console.log(`Позиция числа 4 в массиве [${userArray}] определяется номером ${userArray.indexOf(4)}`);
+} else {
+  console.log(`Массив [${userArray}] не содержит число 4`);
 }
 
 /*---Задание 3---*/
@@ -133,6 +147,17 @@ for (let array of userArray) {
 }
 console.log(newUserArray);
 
+/*---Задание 9.1---*/
+
+console.log('Задание 9.1');
+userArray = [[1, 2, 3], [4, 5, 6]];
+
+console.log('Исходный массив:');
+console.log(userArray);
+console.log('Результат:');
+
+console.log(newUserArray = userArray.flat());
+
 /*---Задание 10---*/
 
 console.log('Задание 10');
@@ -220,13 +245,6 @@ console.log(`Среднее арефмитеческое всех элемент
 
 //Вспомогательная функция
 const findSeason = (a) => {
-  if (isNaN(a) || a <= 0 || a >= 13) {
-    do {
-      alert('Вы ввели некорректное значение, попробуйте еще раз');
-      a = Number(prompt('Введите порядковый номер месяца'));
-    } while (isNaN(a) || a <= 0 || a >= 13);
-  }
-
   if (a === 1 || a === 2 || a === 12) {
     return 'Зима';
   } else if (a >= 3 && a <= 5) {
@@ -241,7 +259,7 @@ const findSeason = (a) => {
 //Вызываемая функция для запуска игры
 const playFirstGame = () => {
   alert('Давайте сыграем в первую игру!');
-  let monthNumber = Number(prompt('Введите порядковый номер месяца'));
+  let monthNumber = inputNumbers(1, 12);
   alert(findSeason(monthNumber));
 }
 
@@ -250,3 +268,4 @@ const playFirstGame = () => {
 // for (let i=1; i<=12; i++) {
 //     console.log(findSeason(i));
 // }
+
