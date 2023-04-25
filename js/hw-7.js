@@ -52,14 +52,29 @@ const playFirstGame = () => {
 /*---Задание 1---*/
 
 console.log('Задание 1');
-let userArray = [1, 5, 4, 10, 0, 3];
-console.log(`Исходный массив: \n[${userArray}]`);
-console.log('Результат:');
+let userStr = 'js';
+console.log(`Исходная строка: \n${userStr}`);
+console.log(`Результат: \n${userStr.toUpperCase()}`);
 
-for (let i = 0; i < userArray.length; i++) {
-    console.log(userArray[i]);
-    if (userArray[i] === 10) {
-        break;
-    }
+/*---Задание 2---*/
+
+//---Функция поиска строки в массиве, которая начинается с ключевого слова (строки)
+const searchStrStartKeyWord = (array, key) => {
+    key = key.toLowerCase();
+    array = array.filter(item => item.toLowerCase().startsWith(`${key}`));
+    array = array.map(item => item.toLowerCase());    //Если надо возвращать в нижнем регистре, если в исходном, то функцию убираем
+    return array;
 }
+
+//---Выполнение задания
+console.log('Задание ');
+userStr = String(prompt('Введите массив строк, разделяя их запятой и пробелом после нее'));
+let userArray = userStr.split(', ');
+
+console.log(`Исходный массив: \n[${userArray}]`);
+let keyWord = prompt('Введите ключевую строку для поиска');
+console.log(`Ключевое слово для поиска: \n[${keyWord}]`);
+
+console.log(`Результат: \n[${searchStrStartKeyWord(userArray, keyWord)}]`);
+
 
