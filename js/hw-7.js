@@ -49,7 +49,30 @@ const playFirstGame = () => {
 //     console.log(findSeason(i));
 // }
 
+/*---Блок функций для выполнения второй игры---*/
 
+const toPlaySecondGame = (array) => {
+    array = array.sort(() => Math.random() - 0.5);
+    alert(`Запомните пожалуйста эти слова: \n${array.join(' ')}`);
+    let userFirstWorld = String(prompt('Введите первое слово'));
+    let userLastWorld = String(prompt('Введите последнее слово'));
+    if (userFirstWorld.toLowerCase() === array[0].toLowerCase() && userLastWorld.toLowerCase() === array[array.length - 1].toLowerCase()) {
+        alert('Поздравляем!!! Вы угадали.');
+    } else if (userFirstWorld.toLowerCase() === array[0].toLowerCase() || userLastWorld.toLowerCase() === array[array.length - 1].toLowerCase()) {
+        alert('Вы были близки к победе!');
+    } else {
+        alert('Вы не угадали');
+    }
+
+}
+
+//Вызываемая функция для запуска второй игры
+
+const playSecondGame = () => {
+    alert('Сейчас мы будем играть в загадки');
+    userArray = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+    toPlaySecondGame(userArray);
+}
 
 
 /*---Задание 1---*/
@@ -174,5 +197,16 @@ const formatDate = (dateObject) => {
 console.log(`Задание 10`);
 currentDate = new Date();
 console.log(formatDate(currentDate));
+
+/*---Задание 11---*/
+console.log('Задание 11');
+playSecondGame();
+
+
+
+
+
+
+
 
 
