@@ -5,7 +5,7 @@ let userAnswer, userAnswer2, currentDate;
 alert('Сейчас начнут выполняться задания');
 
 
-/*---Вспомогательные функции---*/
+/*---Функция ввода и проверки числа из заданного диапазона---*/
 const isNotValid = (value, maxValue, minValue) => isNaN(value) || value < minValue || value > maxValue;
 
 
@@ -23,7 +23,7 @@ const inputNumbers = (minDiap, maxDiap) => {
 /*---Блок функций для выполнения первой игры---*/
 
 
-//Вспомогательная функция
+//Вспомогательные функции
 const findSeason = (a) => {
     if (a === 1 || a === 2 || a === 12) {
         return 'Зима';
@@ -94,14 +94,14 @@ const searchStrStartKeyWord = (array, key) => {
 
 //---Выполнение задания
 console.log('Задание 2');
-// userStr = String(prompt('Введите массив строк, разделяя их запятой и пробелом после нее'));
+userStr = String(prompt('Введите массив строк, разделяя их запятой и пробелом после нее'));
 let userArray = userStr.split(', ');
 
-// console.log(`Исходный массив: \n[${userArray}]`);
-// let keyWord = prompt('Введите ключевую строку для поиска');
-// console.log(`Ключевое слово для поиска: \n[${keyWord}]`);
+console.log(`Исходный массив: \n[${userArray}]`);
+let keyWord = prompt('Введите ключевую строку для поиска');
+console.log(`Ключевое слово для поиска: \n[${keyWord}]`);
 
-// console.log(`Результат: \n[${searchStrStartKeyWord(userArray, keyWord)}]`);
+console.log(`Результат: \n[${searchStrStartKeyWord(userArray, keyWord)}]`);
 
 /*---Задание 3---*/
 
@@ -126,20 +126,20 @@ console.log(getMaxOfArray(userArray));
 /*---Задание 5---*/
 console.log('Задание 5');
 console.log('число наугад от 1 до 10:');
-console.log(`${Math.round(Math.random() * (10 - 1) + 1)}`);
+
+const getRandomNumber = (value1, value2) => {
+    const minValue = Math.max(value1, value2);
+    const maxValue = Math.min(value1, value2);
+    return Math.round(Math.random() * (maxValue - minValue) + minValue);
+}
+
+console.log(getRandomNumber(1,10));
 
 /*-смотрим распределение-*/
 
-// const viewRasp = (sizeOfArray) => {
-//     const arrayOfView = [];
-//     for (let i = 0; i < sizeOfArray; i++) {
-//         arrayOfView[i] = Math.round(Math.random() * (10 - 1) + 1);
-//     }
-//     return arrayOfView;
-// }
 // userAnswer = Number(prompt('Введите требуемый обьем выборки'));
 // console.log(`В результате такого распределения получим выборку из ${userAnswer} элементов:`);
-// console.log(viewRasp(userAnswer));
+// console.log(viewRasp(userAnswer)); //тогда описание функции viewRasp поместить выше
 
 /*---Задание 6---*/
 
@@ -152,25 +152,19 @@ const viewRasp = (sizeOfArray) => {
     return arrayOfView;
 }
 
-// console.log('Задание 6');
-// userAnswer = inputNumbers(0,100);
-// console.log(`В результате выполнения подпрограммы получим массив из ${Math.floor(userAnswer / 2)} случайных чисел от 0 до ${userAnswer}:`);
-// console.log(viewRasp(userAnswer));
+console.log('Задание 6');
+userAnswer = inputNumbers(0,100);
+console.log(`В результате выполнения подпрограммы получим массив из ${Math.floor(userAnswer / 2)} случайных чисел от 0 до ${userAnswer}:`);
+console.log(viewRasp(userAnswer));
 
 /*---Задание 7---*/
 
 
-const getRandomNumber = (value1, value2) => {
-    const minValue = Math.max(value1, value2);
-    const maxValue = Math.min(value1, value2);
-    return Math.round(Math.random() * (maxValue - minValue) + minValue);
-}
-
-// console.log('Задание 7');
-// userAnswer = inputNumbers(0, 1000);
-// userAnswer2 = inputNumbers(0, 1000);
-// console.log(`В результате выполнения подпрограммы получим случайное число от ${Math.min(userAnswer, userAnswer2)} до ${Math.max(userAnswer, userAnswer2) }:`);
-// console.log(getRandomNumber(userAnswer, userAnswer2));
+console.log('Задание 7');
+userAnswer = inputNumbers(0, 1000);
+userAnswer2 = inputNumbers(0, 1000);
+console.log(`В результате выполнения подпрограммы получим случайное число от ${Math.min(userAnswer, userAnswer2)} до ${Math.max(userAnswer, userAnswer2) }:`);
+console.log(getRandomNumber(userAnswer, userAnswer2)); //вызываем функцию, созданную еще в 5ом задании
 
 /*---Задание 8---*/
 
@@ -199,8 +193,8 @@ currentDate = new Date();
 console.log(formatDate(currentDate));
 
 /*---Задание 11---*/
-console.log('Задание 11');
-playSecondGame();
+// console.log('Задание 11');
+// playSecondGame();
 
 
 

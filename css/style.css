@@ -148,10 +148,15 @@ a:hover {
 .gamebox__img {
   width: 485px;
   height: 333px;
-  background-image: url(../img/game1_pic.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.gamebox__img_item1 {
+  background-image: url(../img/game1_pic.png);
+}
+.gamebox__img_item2 {
+  background-image: url(../img/game2_pic.png);
 }
 
 /*----Подключаем медиа-запросы для адаптива*/
