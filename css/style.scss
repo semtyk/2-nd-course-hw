@@ -172,10 +172,16 @@ a {
     &__img {
         width: 485px;
         height: 333px;
-        background-image: url(../img/game1_pic.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+
+        &_item1 {
+            background-image: url(../img/game1_pic.png);
+        }
+        &_item2{
+            background-image: url(../img/game2_pic.png);
+        }
     }
 }
 

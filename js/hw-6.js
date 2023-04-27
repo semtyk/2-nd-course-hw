@@ -16,6 +16,35 @@ const inputNumbers = (minDiap, maxDiap) => {
   return userNumber;
 }
 
+/*---Блок функций для выполнения первой игры---*/
+
+
+//Вспомогательная функция
+const findSeason = (a) => {
+  if (a === 1 || a === 2 || a === 12) {
+    return 'Зима';
+  } else if (a >= 3 && a <= 5) {
+    return 'Весна';
+  } else if (a >= 6 && a <= 8) {
+    return 'Лето';
+  } else {
+    return 'Осень';
+  }
+}
+
+//Вызываемая функция для запуска игры
+const playFirstGame = () => {
+  alert('Давайте сыграем в первую игру!');
+  let monthNumber = inputNumbers(1, 12);
+  alert(findSeason(monthNumber));
+}
+
+
+/*---проверка---*/
+// for (let i=1; i<=12; i++) {
+//     console.log(findSeason(i));
+// }
+
 
 
 /*---Задание 1---*/
@@ -238,34 +267,3 @@ for (let i = 0; i < 6; i++) {
 let result = userArray.reduce((sum, item) => sum+item);
 console.log(`Исходный массив: \n[${userArray}]`);
 console.log(`Среднее арефмитеческое всех элементов: \n${(result/userArray.length).toFixed(2)}`);
-
-
-/*---Блок функций для выполнения первой игры---*/
-
-
-//Вспомогательная функция
-const findSeason = (a) => {
-  if (a === 1 || a === 2 || a === 12) {
-    return 'Зима';
-  } else if (a >= 3 && a <= 5) {
-    return 'Весна';
-  } else if (a >= 6 && a <= 8) {
-    return 'Лето';
-  } else {
-    return 'Осень';
-  }
-}
-
-//Вызываемая функция для запуска игры
-const playFirstGame = () => {
-  alert('Давайте сыграем в первую игру!');
-  let monthNumber = inputNumbers(1, 12);
-  alert(findSeason(monthNumber));
-}
-
-
-/*---проверка---*/
-// for (let i=1; i<=12; i++) {
-//     console.log(findSeason(i));
-// }
-
