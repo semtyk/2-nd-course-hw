@@ -1,5 +1,5 @@
 "use strict";
-let userAnswer, userAnswer2, currentDate;
+let userAnswer, userAnswer2, currentDate, userArray;
 
 
 alert('Сейчас начнут выполняться задания');
@@ -75,14 +75,14 @@ const playSecondGame = () => {
 }
 
 
-/*Практика*/ 
+/*Практика*/
 
-/*Таймер*/ 
+/*Таймер*/
 
 const timer = (deadline) => {
-    
 
-    if (isNaN(+deadline) || deadline<0) {
+
+    if (isNaN(+deadline) || deadline < 0) {
         do {
             alert('Вы ввели некорректное значение, попробуйте еще раз');
             deadline = prompt(`Введите число секунд, на сколько вы хотите поставить таймер?`);
@@ -98,10 +98,34 @@ const timer = (deadline) => {
     setTimeout(() => {
         clearInterval(interval);
         console.log('Время истекло');
-    }, deadline*1000);
+    }, deadline * 1000);
 }
 
 // const deadline = prompt(`Введите число секунд, на сколько вы хотите поставить таймер?`);
 // timer(deadline);
 
+/*Задание 1 */
+console.log('Задание 1');
+userArray = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+];
 
+console.log(`Исходный массив:`);
+userArray.forEach(element => {
+    console.log(`Имя: ${element.name}, лет: ${element.age}`);
+});
+userArray.sort((a, b) => {
+    if (a.age > b.age) {
+        return 1;
+    }
+    if (a.age < b.age) {
+        return -1;
+    } else return 0;
+});
+console.log(`Отсортированный массив:`);
+userArray.forEach(element => {
+    console.log(`Имя: ${element.name}, лет: ${element.age}`);
+});
