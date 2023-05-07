@@ -220,18 +220,31 @@ function sayHi(name) {
 // Код выше менять нельзя
 
 // Нужно изменить код ниже:
-// function delayForSecond(cb,name) {
-//     setTimeout(() => {
-//         console.log('Прошла одна секунда');
-//         if (cb) { cb(name); }
+// delayForSecond(sayHi('Глеб'))
 
-//     }, 1000)
-// }
-//  delayForSecond(sayHi, 'Глеб');
+//Меняем: 
+
+function delayForSecond(cb,name) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if (cb) { cb(name); }
+
+    }, 1000)
+}
+ delayForSecond(sayHi, 'Глеб');
 
  // или так если по формальному подходить
-delayForSecond();
-setTimeout(() => {
-    sayHi('Глеб')
-}, 1000)
+// delayForSecond();
+// setTimeout(() => {
+//     sayHi('Глеб')
+// }, 1000)
 
+//Можно еще так
+
+// function delayForSecond(cb) {
+//     setTimeout(() => {
+//         console.log('Прошла одна секунда');
+//         cb('Глеб');
+//     }, 1000)
+// }
+//  delayForSecond(sayHi);
